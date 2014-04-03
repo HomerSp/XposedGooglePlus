@@ -11,8 +11,6 @@ import de.robv.android.xposed.callbacks.XC_LayoutInflated;
 public class Main implements IXposedHookInitPackageResources {
     @Override
     public void handleInitPackageResources(final XC_InitPackageResources.InitPackageResourcesParam resparam) throws Throwable {
-        XposedBridge.log("[XposedGoogle+] Package: " + resparam.packageName);
-
         if (!resparam.packageName.equals("com.google.android.apps.plus"))
             return;
 
